@@ -1,0 +1,465 @@
+/**
+  Нормализация блочной модели
+ */
+ *,
+ *::before,
+ *::after {
+   box-sizing: border-box;
+ }
+ 
+ /**
+   Убираем внутренние отступы слева тегам списков,
+   у которых есть атрибут class
+  */
+ :where(ul, ol):where([class]) {
+   padding-left: 0;
+ }
+ 
+ /**
+   Убираем внешние отступы body и двум другим тегам,
+   у которых есть атрибут class
+  */
+ body,
+ :where(blockquote, figure):where([class]) {
+   margin: 0;
+ }
+ 
+ /**
+   Убираем внешние отступы вертикали нужным тегам,
+   у которых есть атрибут class
+  */
+ :where(
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6,
+   p,
+   ul,
+   ol,
+   dl
+ ):where([class]) {
+   margin-block: 0;
+ }
+ 
+ :where(dd[class]) {
+   margin-left: 0;
+ }
+ 
+ :where(fieldset[class]) {
+   margin-left: 0;
+   padding: 0;
+   border: none;
+ }
+ 
+ /**
+   Убираем стандартный маркер маркированному списку,
+   у которого есть атрибут class
+  */
+ :where(ul[class]) {
+   list-style: none;
+ }
+ 
+ :where(address[class]) {
+   font-style: normal;
+ }
+ 
+ /**
+   Обнуляем вертикальные внешние отступы параграфа,
+   объявляем локальную переменную для внешнего отступа вниз,
+   чтобы избежать взаимодействие с более сложным селектором
+  */
+ p {
+   --paragraphMarginBottom: 24px;
+ 
+   margin-block: 0;
+ }
+ 
+ /**
+   Внешний отступ вниз для параграфа без атрибута class,
+   который расположен не последним среди своих соседних элементов
+  */
+ p:where(:not([class]):not(:last-child)) {
+   margin-bottom: var(--paragraphMarginBottom);
+ }
+ 
+ 
+ /**
+   Упрощаем работу с изображениями
+  */
+ img {
+   display: block;
+   max-width: 100%;
+ }
+ 
+ /**
+   Наследуем свойства шрифт для полей ввода
+  */
+ input,
+ textarea,
+ select,
+ button {
+   font: inherit;
+ }
+ 
+ html {
+   /**
+     Пригодится в большинстве ситуаций
+     (когда, например, нужно будет "прижать" футер к низу сайта)
+    */
+   height: 100%;
+ }
+ 
+ /**
+   Плавный скролл
+  */
+ html,
+ :has(:target) {
+   scroll-behavior: smooth;
+ }
+ 
+ body {
+   /**
+     Пригодится в большинстве ситуаций
+     (когда, например, нужно будет "прижать" футер к низу сайта)
+    */
+   min-height: 100%;
+   /**
+     Унифицированный интерлиньяж
+    */
+   line-height: 1.5;
+ }
+ 
+ /**
+   Приводим к единому цвету svg-элементы
+  */
+ svg *[fill] { fill: currentColor }
+ svg *[stroke] { stroke: currentColor }
+ 
+ /**
+   Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+  */
+ svg * {
+   transition-property: fill, stroke;
+ }
+ 
+ /**
+   Удаляем все анимации и переходы для людей,
+   которые предпочитают их не использовать
+  */
+ @media (prefers-reduced-motion: reduce) {
+   * {
+     animation-duration: 0.01ms !important;
+     animation-iteration-count: 1 !important;
+     transition-duration: 0.01ms !important;
+     scroll-behavior: auto !important;
+   }
+ }
+
+ :root {
+    --color-dark: #000000;
+    --color-light: #ffffff;
+    --color-dark-gray: #404040;
+    --color-dark-alternate: #131619;
+    --color-light-gray:#C4C4C4;
+
+    --border-radius: 30px;
+    --border: 1px solid var(--color-light);
+    
+    --input-height:54px;
+
+    --container-width: 1300px;
+    --container-padding-x: 15px;
+
+    --transition-duration: 0.2s;
+
+    --header-height:90px;
+ }
+
+ body {
+    font-weight: 300;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--color-light-gray);
+    background-color: var(--color-dark);
+    
+}
+a,
+button,
+input,
+textarea,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+a {
+    color: var(--color-light);
+}
+a:hover{
+    color: var(--color-light-gray);
+}
+
+.container {
+    max-width: calc(var(--container-width)+var(--container-padding-x)*2);
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0 ) !important;
+  overflow: hidden !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+
+.title-medium {
+  font-size: 40px;
+  line-height: 1.3;
+  color: var(--color-light);
+}
+.button {
+    display: inline-flex;
+    align-items:center;
+    height: 38px;
+    padding-inline: 26px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 2;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    background-color: var(--color-light);
+    border:none;
+    white-space: nowrap;
+    border-radius: var(--border-radius);
+}
+
+.button:hover {
+    background-color: var(--color-light-gray);
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    min-height: var(--header-height);
+    padding-inline: 32px;
+    background-color: var(--color-dark-alternate);
+}
+
+.header-logo {
+    flex-shrink: 0;
+}
+
+.header-menu-list {
+    display: flex;
+    column-gap: 50px;
+    flex-wrap: wrap;
+}
+
+.header-menu-link {
+    display: inline-flex;
+    align-items:center;
+    height: var(--header-height);
+    text-decoration:none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    column-gap: 7px;
+    letter-spacing: 1.2px;
+}
+
+.header-menu-link.is-current::after {
+    content:"";
+    width: 5px;
+    aspect-ratio: 1;
+    background-color: currentColor;
+    border-radius: 50%;
+}
+
+.header-actions {
+    display:flex;
+    column-gap: 40px;
+}
+
+.header-burger-button {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 4px;
+    width: 40px;
+    aspect-ratio:1;
+    padding-left: 8px;
+    color: var(--color-light);
+    background-color: transparent;
+    border:var(--border);
+    border-radius: 50%;
+}
+
+
+
+.header-burger-button-line {
+    width: 6px;
+    height: 1px;
+    background-color: currentColor;
+    box-shadow: 16px 0px 0px currentColor;
+}
+
+.header-burger-button:hover {
+    color: var(--color-light-gray);
+    border-color: currentColor;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: end ;
+  min-height: calc(100vh - var(--header-height));
+  padding: 36px 70px;
+  color: var(--color-light);
+  background-color: var(--color-dark-alternate);
+}
+
+.banner-body {
+  text-transform: uppercase;
+}
+
+.banner-info {
+  display: flex;
+  align-items: end;
+  font-size: clamp(16px, 1.56vw, 30px);
+  line-height: 1.27;
+  font-weight:500;
+}
+
+.banner-info::before {
+  content: '';
+  width: clamp(60px, 10.1vw, 194px);
+  aspect-ratio: 1;
+  margin-right: 30px;
+  background: url('./icons/bold-arrow-down-right.svg') center/contain no-repeat;
+}
+
+.banner-title {
+  font-size: min(18.75vw, 360px);
+  line-height: 1;
+}
+
+.banner-pagination-list {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.banner-pagination-item {
+  display: flex;
+}
+
+.banner-pagination-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  background-color: transparent;
+  border: none;
+  
+}
+.banner-pagination-button::after {
+  content:'';
+  width: 10px;
+  aspect-ratio: 1;
+  border:var(--border);
+  border-radius:50% ;
+  transition-duration: var(--transition-duration);
+}
+.banner-pagination-button.is-current::after {
+  background-color: var(--color-light);
+}
+
+.banner-pagination-button:not(.is-current):hover::after {
+  border-color: var(--color-light-gray);
+}
+.motivation-item:nth-child(even) {
+  background-color: var(--color-dark-alternate);
+}
+.motivation-item:nth-child(even) .motivation-card {
+  flex-direction: row-reverse;
+}
+.motivation-card {
+  
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  column-gap: clamp(30px, 10.42vw, 200px);
+}
+
+.motivation-card-image {
+  margin-block: -60px;
+}
+.motivation-card-body {
+  padding-left: 35px;
+}
+
+@media (max-width: 1024px) {
+    .header {
+        flex-wrap: wrap;
+        row-gap: 10px;
+        padding-top: 20px;
+       
+    }
+
+    .header,
+    .banner {
+      padding-inline:15px;
+    }
+    .header-menu {
+        order:1;
+        flex-basis: 100%;
+    }
+
+    .header-menu-link {
+        height: 50px;
+    }
+
+    .banner {
+      row-gap: 10px;
+    }
+}
+
+@media (max-width:767px) {
+    .button {
+        padding-inline: 18px;
+    }
+    .header {
+        padding-top: 10px;
+    }
+    .header-menu-list {
+        column-gap:24px;
+    }
+    .header-menu-link {
+        height: 32px;
+    }
+
+    .header-actions {
+        column-gap: 15px;
+    }
+    .banner-info {
+      margin-bottom: 5px;
+    }
+
+    .banner-info::before {
+      margin-right: 10px;
+    }
+}

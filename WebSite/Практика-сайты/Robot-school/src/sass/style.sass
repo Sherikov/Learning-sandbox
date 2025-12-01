@@ -1,0 +1,273 @@
+@import "normalizez.scss"
+@import "resets.scss"
+
+* 
+    
+    box-sizing: border-box
+.first-section
+     background-color: rgba(20, 16, 36, 1)
+     min-width: 1140px
+     height: 1080px
+     margin:0 auto
+.first-wrapper
+    &__logo
+        position: relative
+        width: 170px
+        height: 48px
+        color: #FFF
+        font-family: Jost
+        font-size: 30px
+        font-style: normal
+        font-weight: 700
+        top: 25px
+        margin-left: 100px
+
+
+
+
+.first-wrapper-navmenu
+    &__phone-number
+        position: relative
+        width: 170px
+        height: 48px
+        color: #FFF
+        text-align: right
+        font-family: Jost
+        font-size: 30px
+        font-style: normal
+        font-weight: 700
+        top: -15px
+        right: -1150px
+        margin-left: 100px
+    
+.navbar
+    &__list
+        position: absolute 
+        display: flex
+        justify-content: space-between
+        align-content: center
+        width: 325px
+        height: 32px
+        top: 30px
+        right: 525px
+    &__list-item
+        a
+            text-decoration: none
+            color: #FFF
+            text-align: center
+            font-family: Jost
+            font-size: 20px
+            font-style: normal
+            font-weight: 400
+            line-height: 160%
+            
+
+.content 
+    .left-wrapper
+        position: relative
+        h1
+            position: absolute
+            height: 90px
+            width: 450px
+            color: #FFF
+            font-family: Jost
+            font-size: 70px
+            font-style: normal
+            font-weight: 600
+            left: 150px
+            top: 340px
+        p
+            height: 64px
+            width: 478px
+            color: #fff
+            font-family: Jost
+            font-size: 20px
+            font-style: normal
+            font-weight: 400
+            left: 150px
+            top: 476px
+            position: relative
+            margin-right: 0
+            
+        .btn-box
+            position: absolute
+            display: inline-flex
+            padding: 25px 54px
+            justify-content: center
+            align-items: center
+            gap: 10px
+            border-radius: 5px
+            background: #D52027
+            top: 550px
+            left: 150px
+
+    .right-wrapper
+        position: relative
+        &__circle
+             position: absolute
+             top: 90px
+             right: 18px
+
+        &__girl-img
+             position: absolute
+             top: 2px
+             right: 140px
+             
+.second-section
+    min-width: 1140px
+    height: 615px
+    background: #F9F9F9
+
+    .second-wrapper__container
+        position: relative
+
+
+        .RbSchool
+            position: absolute 
+            margin-right: 0px
+            left: 280px
+            top: 120px
+            width: 890px
+            height: 140px
+            color: #141024
+            font-family: Jost
+            font-size: 30px
+            font-style: normal
+            font-weight: 400
+            &__text
+                font-weight: 600
+
+        .second-wrapper__container-text
+            display: flex
+            align-items: center
+            width: 1110px
+            justify-content: space-between
+            position: absolute
+            top: 325px
+            left: 280px
+            
+
+            
+
+        .zagolovok-1
+            color: #D52027 
+            font-family: Jost
+            font-size: 70px
+            font-style: normal
+            font-weight: 600
+            height: 90px
+            width: 180px
+            margin-right: 0
+
+        p
+            width: 260px
+            height: 58px
+            color: rgba(20, 16, 36, 0.70)
+            font-family: Jost
+            font-size: 18px
+            font-style: normal
+            font-weight: 400
+            
+            
+.third-section 
+    min-width: 1140px
+    height: 485px
+    background: #F9F9F9
+    position: relative
+
+    h1
+        display: block
+        position: absolute
+        left: 280px
+        color: #141024
+        font-family: Jost
+        font-size: 50px
+        font-style: normal
+        font-weight: 600
+        width: 680px
+        height: 65px
+            
+
+    &__content
+        position: relative
+        display: flex
+        justify-content: space-around
+        top: 150px
+
+        .content-text
+            h3
+                width: 170px
+                height: 55px
+                color: #141024
+                font-family: Jost
+                font-size: 38px
+                font-style: normal
+                font-weight: 600
+            p
+                width: 360px
+                height: 87px
+                color: rgba(20, 16, 36, 0.70)
+                font-family: Jost
+                font-size: 18px
+                font-style: normal
+                font-weight: 400
+
+            .content-text-tooltip
+                position: relative
+                &__img
+                    position: absolute
+                    top: -147px
+                    right: 158px
+                    height: 20px
+                    width: 20px
+
+.four-section
+    min-width: 1110px
+    height: 800px
+    background: #f9f9f9
+    position: relative
+    
+    h1
+        width: 680px
+        height: 80px
+        color: #141024
+        font-family: Jost
+        font-size: 50px
+        font-style: normal
+        font-weight: 600
+
+    .four-section-scrolling
+        display: flex
+        flex-direction: row
+        overflow-y: scroll
+        justify-content: space-between 15px
+        
+
+        &::-webkit-scrollbar
+            display: none
+       
+        &__cards
+            
+            flex: 0 0 auto
+                 
+            h3
+                color: #141024
+                text-align: center
+                font-family: Jost
+                font-size: 24px
+                font-style: normal
+                font-weight: 600
+                line-height: 160%
+
+            p
+                color: rgba(20, 16, 36, 0.70)
+                font-family: Jost
+                font-size: 18px
+                font-style: normal
+                font-weight: 400
+                line-height: 28.8px
+                text-align: center
+
+        
+
+
