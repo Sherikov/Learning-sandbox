@@ -9,6 +9,7 @@ body {
     position: relative;
     left: 550px;
     top: 10px;
+  
     
 }
 
@@ -26,9 +27,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
-nav-bar {
+.nav-bar {
     display: inline;
     margin:32px;
+    
 }
 a {
     text-decoration: none;
