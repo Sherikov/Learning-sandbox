@@ -2,30 +2,29 @@
     margin: 0;
     padding: 0;
 }
-:root {
-    --font-roboto: url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
 
+:root {
+    --bg-grey: rgba(70, 70, 70, 0.5);
+    --form-bg-color:rgba(215, 215, 215, 0.4);
+}
 body{
     display: flex;
-    font-family:var(--font-roboto);
+    font-family: 'Roboto Condensed', system-ui, sans-serif;
+    color: #333;
 }
 
 .side_section {
     height: 100vh;
-    width: calc(100% - 60%);
-    background-image: url("roberto-shumski-fQqvheRnzpo-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
+    width: 40%;
+    background: url("roberto-shumski-fQqvheRnzpo-unsplash.jpg") center / cover;
     display: flex;
     justify-content: center;
     position: relative;
-    
-
 }
 
 .logo_container {
-    background-color: rgba(70, 70, 70, 0.5);
+    background-color: var(--bg-grey);
     width: 100%;
     height: 180px;
     position: absolute;
@@ -33,13 +32,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
-
 }
-.logo {
+
+.logo  {
     width: 350px;
-    height: 170px;
+    height: 250px;
 }
 
 .side_footer  {
@@ -56,15 +53,16 @@ body{
 
 .form_section {
     height: 100vh;
-    width: calc(100% - 40%);
-    background-color:rgba(215, 215, 215, 0.4);
+    width: 60%;
+    background-color:var(--form-bg-color);
     display: flex;
-    flex-direction: column;
-   
+    flex-direction: column;  
 }
+
 .form {
     flex: 1;
 }
+
 .section_text {
     font-size: 2em;
     text-align: center;
@@ -76,17 +74,16 @@ body{
     }
 }
 
-.inputSection {
-   
+.input_section {
     background-color: white;
     box-shadow: -3px 5px 17px -5px rgba(0,0,0,0.62);
     h2 {
         font-size: 1.6em;
         margin: 20px;
     }
-
 }
-.inputForm {
+
+.input_form {
     display: flex;
     flex-wrap: wrap;
     width: 70%;
@@ -94,27 +91,27 @@ body{
      label {
         font-size: 1.1em;
         font-weight: 600;
-        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
-    
-    
 }
 
-.form-group {
+.form_group {
     display: flex;
     flex-direction: column;
     gap: 3px;
-    margin-left: 35px;
-    margin-bottom: 25px;
+    margin: 0 0 25px 35px ;
 }
 
 input {
     border-radius: 4px;
-    height: 25px;
+    padding: 8px 10px;
     width: 230px;
     border: 2px solid #ccc;
+    outline: none;
 }
-
+input:focus {
+    border-color: blue;
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.2);
+}
 .btn_section {
     display: flex;
     flex-direction: column;
@@ -131,7 +128,6 @@ input {
 }
 
 .btn {
-
     width: 225px;
     height: 45px;
     border-radius: 5px;
@@ -143,3 +139,26 @@ input {
     margin-bottom: 20px;
     color: white;
 }
+
+.btn:hover {
+    color:rgb(0, 144, 50);
+    background-color:white;
+    font-size: 1.15em;
+    cursor: pointer;
+}
+
+.error_message {
+    color: red;
+    font-size: 0.8em;
+    display: none;
+    margin-top: 4px;
+}
+
+input:not(:placeholder-shown):invalid:not(:focus) + .error_message {
+    display: block;
+}
+
+input:not(:placeholder-shown):invalid:not(:focus) {
+    border: 2px solid red;
+}
+
