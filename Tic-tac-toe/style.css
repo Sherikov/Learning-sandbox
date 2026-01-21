@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: #83cade;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-items:center;
+}
+#main_menu{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items:center;
+    h2 {
+        font-size: 3.2em;
+        color:darkblue;
+        font-weight: 500;
+    }
+}
+
+.choice {
+    width: 450px;
+    height: 50px;
+    border-radius: 20px;
+    border:none;
+    font-size: 1.8em;
+}
+
+.choice:hover{
+    background-color:#5ef500;
+    color:white;
+    transform: translateY(-5px);
+    transition: 0.8s;
+    font-size: 1.9em;
+    font-weight: 600;
+}
+
+
+.container {
+    width: 30%;
+    height: 80%;
+    background-color: white;
+    display: grid;
+    grid-template-rows: 1fr 4fr 2fr;
+    justify-content: center;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    gap: 10px;
+}
+
+#head {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items:center;
+    h1 {
+        font-size: 2em;
+        font-weight: 700;
+        color:#4cc7e9 ;
+        
+    }
+}
+#status {
+    background-color:orange;
+    border-radius: 20px;
+    width: 200px;
+    height: 35px;
+    text-align: center;
+    border: none;
+    h3 {
+        font-size: 1.4em;   
+        color:white;
+    }
+}
+
+#gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    background-color:#5c9cd8;
+    border:none;   
+}
+
+.card {
+    background-color: white;
+    border:none;
+    cursor:default;
+    outline: none;
+}
+/* Change cursor and bgcolor when cell is empty*/
+.card:empty {
+    cursor: pointer;
+}
+.card:empty:hover {
+    background-color: #f0f8ff; 
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items:center;
+    gap: 5px;
+    div {
+        font-size: 1.2em;
+    }
+}
+/*Footer's buttons styles*/
+.btn {
+    align-self: start;
+    width: 120px;
+    height: 35px;
+    border:none;
+    background-color: inherit;
+    color:dimgray;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/*style for X*/
+.playerX {
+    color: #FF5733; 
+    font-size: 3em;
+}
+/*style for O*/
+.playerO {
+    color: #33C1FF; 
+    font-size: 3em;
+}
+/*styles for score*/
+span {
+    font-size: 1em;
+    margin-left: 5px;
+}
+
+
