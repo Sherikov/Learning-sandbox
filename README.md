@@ -17,13 +17,18 @@ Here you will find various landing pages, UI components, and small scripts creat
 ## 💻 Projects List
 
 | Project | Tech Stack | Description 
-| :--- | :--- | :--- | :--- |
-| **[Restaurant Page](./Restaurant-page)** | Webpack, JS Modules | Dynamic DOM generation & asset management |
-| **[Etch-a-Sketch](./Etch-a-Sketch)** | JS, CSS Grid | Interactive drawing pad with variable grid size | 
-| **[Tic-Tac-Toe](./Tic-tac-toe)** | JS Modules | Classic game using Factory Functions & Module Pattern | 
-| **[Library App](./LibraryPage)** | JS Objects | Book tracking app using LocalStorage | 
-| **[Rock Paper Scissors](./Rock-paper-scissors)** | Vanilla JS | Simple game logic implementation |
-| **[Sign-up Form](./Sign-up%20form)** | HTML/CSS | Form validation & layout practice | 
+
+| **[Restaurant Page](./Restaurant-page)** | Webpack, JS Modules | Dynamic DOM generation & asset management 
+
+| **[Etch-a-Sketch](./Etch-a-Sketch)** | JS, CSS Grid | Interactive drawing pad with variable grid size 
+
+| **[Tic-Tac-Toe](./Tic-tac-toe)** | JS Modules | Classic game using Factory Functions & Module Pattern 
+
+| **[Library App](./LibraryPage)** | JS Objects | Book tracking app using LocalStorage 
+
+| **[Rock Paper Scissors](./Rock-paper-scissors)** | Vanilla JS | Simple game logic implementation 
+
+| **[Sign-up Form](./Sign-up%20form)** | HTML/CSS | Form validation & layout practice 
 
 ---
 
