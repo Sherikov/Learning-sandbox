@@ -30,6 +30,8 @@ Here you will find various landing pages, UI components, and small scripts creat
 
 | **[Sign-up Form](./Sign-up%20form)** | HTML/CSS | Form validation & layout practice 
 
+| **[Landing-page-collection](./Landing-page-collection)** | HTML/CSS/JS | Collection of single-page websites, interactive UI components (sliders, forms), and layout experiments
+
 ---
 
 ## ⚠️ Disclaimer & Attribution
