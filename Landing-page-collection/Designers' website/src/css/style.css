@@ -289,7 +289,7 @@ header {
 .section_pricing { padding: 100px 50px; }
 .pricing-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Вертикально на макете, но на десктопе обычно рядом */
+    grid-template-columns: 1fr 1fr; 
     gap: 40px;
     max-width: 1000px;
     margin: 0 auto;
