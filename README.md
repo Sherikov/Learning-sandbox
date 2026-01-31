@@ -23,7 +23,7 @@ Here you will find various landing pages, UI components, and small scripts creat
 | **[Tic-Tac-Toe](./Tic-tac-toe)** | JS Modules | Classic game using Factory Functions & Module Pattern | 
 | **[Library App](./LibraryPage)** | JS Objects | Book tracking app using LocalStorage | 
 | **[Rock Paper Scissors](./Rock-paper-scissors)** | Vanilla JS | Simple game logic implementation |
-| **[Sign-up Form](./Sign-up form)** | HTML/CSS | Form validation & layout practice | 
+| **[Sign-up Form](./Sign-up%20form)** | HTML/CSS | Form validation & layout practice | 
 
 ---
 
