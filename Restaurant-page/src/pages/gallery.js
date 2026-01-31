@@ -2,7 +2,7 @@ import '../../styles.css';
 import DOMElementCreator from '../components/DOMElementCreator.js';
 import {  renderHeader, renderFooter } from '../components/layout.js';
 
-// 1. Отрисовываем общие части (Хедер и Футер)
+// 1. Render header and footer
 renderHeader();
 renderFooter();
 

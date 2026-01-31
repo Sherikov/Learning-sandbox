@@ -1,5 +1,6 @@
 import DOMElementCreator from './DOMElementCreator.js';
 
+// Creating logo for header and footer
 function createLogo() {
     const linkWrapper = new DOMElementCreator({ 
         tagName: 'a', 
@@ -21,16 +22,16 @@ function createLogo() {
     return linkWrapper;
 }
 
+// -- Creating Header -- 
 export function renderHeader() {
     const header = document.getElementById('header');
     if (!header) return;
 
-    // 1. ОЧИСТКА: Удаляем всё, что было в хедере, перед отрисовкой
+    // 1. Clearing header
     header.innerHTML = '';
 
     const logo = createLogo();
 
-    // Более надежная проверка: если есть свойство .element, значит это наш класс
     if (logo.element) {
         header.appendChild(logo.element);
     } else {
@@ -68,17 +69,18 @@ export function renderHeader() {
     navBar.addTo(header);
 }
 
+// -- Creating footer -- 
 export function renderFooter() {
     const footer = document.getElementById('footer');
     if (!footer) return;
 
-    // Очищаем футер перед отрисовкой
+  // Clearing footer
     footer.innerHTML = '';
 
-    // --- БЛОК 1: КОНТАКТЫ (Слева) ---
+    // --- container for contacts ---
     const contactsDiv = new DOMElementCreator({ tagName: 'div', id: 'contacts' });
     
-    // Логотип
+    // Logo
     const logo = createLogo(); 
     if (logo.element) {
         contactsDiv.append(logo);
@@ -104,8 +106,7 @@ export function renderFooter() {
         contactsDiv.append(wrapper);
     });
 
-    // --- БЛОК 2: ВРЕМЯ РАБОТЫ (По центру) ---
-    // Восстанавливаем блок, как на картинке
+   // -- Container for opening hours -- 
     const hoursDiv = new DOMElementCreator({ tagName: 'div', id: 'opening_hours' });
     
     hoursDiv.appendChildren([
@@ -114,17 +115,17 @@ export function renderFooter() {
         new DOMElementCreator({ tagName: 'h4', content: 'Без выходных' })
     ]);
 
-    // --- БЛОК 3: СОЦСЕТИ И ДОКУМЕНТЫ (Справа) ---
+    // --- Container for Social Media --
     const socialDiv = new DOMElementCreator({ tagName: 'div', id: 'social_media' });
     const mediaContainer = new DOMElementCreator({ tagName: 'div', className: 'media' });
 
-    // Иконки: Instagram, VK, Facebook
+    // Icon
     const socials = [
         // Instagram
         { path: 'M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z' },
         // VK (ВКонтакте)
         { path: 'M20.9,16.09C21.13,16.82 20.89,17.41 20.18,17.41H17.7C17.09,17.41 16.8,17.09 16.63,16.68C16.63,16.68 15.79,14.63 13.62,12.69C12.92,12.06 12.62,11.85 12.27,11.85C11.8,11.85 11.68,11.99 11.68,12.78V16.61C11.68,17.06 11.54,17.41 10.29,17.41C7.54,17.41 4.5,15.4 2.66,12.73C0.8,10 0,6.86 0,6.86C0,6.86 0.28,6.23 0.88,6.23H3.36C3.92,6.23 4.18,6.5 4.32,6.8C4.32,6.8 5.44,9.52 6.94,11.2C7.43,11.68 7.89,11.85 8.12,11.85C8.24,11.85 8.41,11.71 8.41,11.16V6.86C8.41,6.38 8.27,6.23 7.85,6.23H7.53C7.23,6.23 7,5.99 7,5.75C7,5.22 7.78,4.83 8.54,4.83H10.32C10.78,4.83 11.04,5.06 11.04,5.5V10.11C11.04,10.22 11.23,10.39 11.32,10.29C11.41,10.18 12.33,8.47 13.38,6.57C13.58,6.22 13.78,6 14.32,6H16.8C17.38,6 17.65,6.29 17.53,6.62C17.53,6.62 17.1,7.66 16.32,8.74C15.89,9.33 15.26,9.96 15.1,10.18C14.89,10.47 15,10.61 15.23,10.85C15.23,10.85 18.82,14.19 19.18,14.61C19.5,14.96 19.5,15.41 19.5,15.41L20.9,16.09Z' },
-        // Facebook (Вместо Telegram)
+        // Facebook
         { path: 'M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.15 5.96C15.21 5.96 16.12 6.04 16.12 6.04V8.51H15.01C13.77 8.51 13.38 9.28 13.38 10.07V12.06H16.16L15.72 14.96H13.38V21.96C18.16 21.21 21.82 17.06 21.82 12.06C21.82 6.53 17.32 2.04 12 2.04Z' }
     ];
 
@@ -137,7 +138,6 @@ export function renderFooter() {
         mediaContainer.append(svg);
     });
 
-    // Текст под соцсетями (как на картинке)
    const policy = new DOMElementCreator({
     tagName: 'h4',
     content: 'Политика конфиденциальности '
@@ -150,15 +150,13 @@ export function renderFooter() {
 
     socialDiv.appendChildren([mediaContainer, policy, offer]);
 
-    // Добавляем все три блока в футер
+    // Adding containers to footer
     contactsDiv.addTo(footer);
     hoursDiv.addTo(footer);
     socialDiv.addTo(footer);
 
-    // Копирайт в самом низу (на всю ширину)
+    // copyright container
     const copyright = new DOMElementCreator({ tagName: 'h5', content: '© 2026 Restaurant Gusto' });
-    // Небольшой стиль, чтобы копирайт был внизу
-    copyright.element.style.gridColumn = '1 / 4';
     copyright.element.style.marginTop = '20px';
     copyright.addTo(footer);
 }

@@ -2,8 +2,8 @@ import '../../styles.css';
 import DOMElementCreator from '../components/DOMElementCreator.js';
 import { renderHeader, renderFooter } from '../components/layout.js';
 
-renderHeader(); // --- Adding Header's elements to  Header---
-renderFooter(); // --- Adding Footer's elements to Footer---
+renderHeader(); 
+renderFooter(); 
 
 const main = document.getElementById('main');
 

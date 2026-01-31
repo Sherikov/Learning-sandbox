@@ -2,13 +2,13 @@ import '../../styles.css';
 import DOMElementCreator from '../components/DOMElementCreator.js';
 import { renderHeader,  renderFooter } from '../components/layout.js';
 
-// 1. Отрисовываем общие части (Хедер и Футер)
+// 1. render header and footer
 renderHeader();
 renderFooter();
 
 const main = document.getElementById('main');
 
-// 2. Данные для меню (повторяют твой HTML)
+// 2. Data for menu page
 const menuData = {
     starters: {
         title: "Закуски",
@@ -21,7 +21,6 @@ const menuData = {
     mains: {
         title: "Основные блюда",
         items: [
-             // Я дублирую данные, как в твоем примере, но тут можно поставить реальные основные блюда
             { title: 'Стейк Рибай', price: '390 р', desc: 'Мраморная говядина (зерновой откорм), Морская соль и дробленый перец, Сливочное масло с чесноком и розмарином, Тимьян', img: './img/steak.jpg' },
             { title: 'Паста с трюфелем', price: '280 р', desc: 'Паста Тальятелле (из твердых сортов пшеницы), Сливки 33%, Пармезан выдержанный, Трюфельная паста, Слайсы свежего трюфеля', img: './img/Pasta with truffle.jpg' },
             { title: 'Десерт Павлова', price: '490 р', desc: 'Хрустящая французская меренга, Нежный крем на основе маскарпоне, Свежая клубника и голубика (сезонные ягоды), Соус из маракуйи', img: './img/pavlova dessert.jpg' }
@@ -37,7 +36,7 @@ const menuData = {
     }
 };
 
-// 3. Функция для создания одной секции меню
+// 3. Function for creating section
 function createMenuSection(sectionData) {
     const section = new DOMElementCreator({ tagName: 'section', className: 'menu_dishes' });
     const title = new DOMElementCreator({ tagName: 'h3', content: sectionData.title });
@@ -67,13 +66,13 @@ function createMenuSection(sectionData) {
     return section;
 }
 
-// 4. Сборка страницы
+// 4. Page assembly
 const menuInfoDiv = new DOMElementCreator({ tagName: 'div', className: 'menu_info' });
 
-// Создаем секции по очереди
+// Creating sections
 menuInfoDiv.append(createMenuSection(menuData.starters));
 menuInfoDiv.append(createMenuSection(menuData.mains));
 menuInfoDiv.append(createMenuSection(menuData.desserts));
 
-// Добавляем все в Main
+// Adding all section to main
 menuInfoDiv.addTo(main);
