@@ -47,9 +47,9 @@ body {
     }
 }
 .logo-link {
-    text-decoration: none; /* Убирает линию */
-    color: inherit;        /* Оставляет белый цвет (наследует от родителя) */
-    display: contents;     /* Чтобы ссылка не ломала верстку flex/grid внутри хедера */
+    text-decoration: none; 
+    color: inherit;        
+    display: contents;    
 }
 #nav_bar {
     display: flex;

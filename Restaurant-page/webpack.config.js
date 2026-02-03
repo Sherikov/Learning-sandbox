@@ -1,39 +1,42 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require("copy-webpack-plugin"); // <--- 1. Импортируем плагин
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: "development",
+
   entry: {
-    index: './src/pages/index.js',
-    menu: './src/pages/menu.js',
-    gallery: './src/pages/gallery.js',
-    aboutus: './src/pages/aboutus.js',
+    main: './src/index.js', 
   },
+
   output: {
-    filename: "[name].bundle.js",
+    filename: "[name].bundle.js", // The output will be main.bundle.js
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
+
   devtool: "eval-source-map",
+
   devServer: {
     static: "./dist",
-    watchFiles: ["./*.html"],
+    watchFiles: ["./index.html"], 
     hot: true,
   },
+
   plugins: [
-    new HtmlWebpackPlugin({ template: "./index.html", filename: "index.html", chunks: ["index"] }),
-    new HtmlWebpackPlugin({ template: "./menu.html", filename: "menu.html", chunks: ["menu"] }),
-    new HtmlWebpackPlugin({ template: "./gallery.html", filename: "gallery.html", chunks: ["gallery"] }),
-    new HtmlWebpackPlugin({ template: "./aboutus.html", filename: "aboutus.html", chunks: ["aboutus"] }),
-    
-    // <--- 2. Добавляем настройку копирования
+
+    new HtmlWebpackPlugin({ 
+        template: "./index.html", 
+        filename: "index.html" 
+    }),
+
     new CopyPlugin({
       patterns: [
-        { from: "img", to: "img" }, // Берет папку img из корня и копирует в dist/img
+        { from: "img", to: "img" },
       ],
     }),
   ],
+
   module: {
     rules: [
       {

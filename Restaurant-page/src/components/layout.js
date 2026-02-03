@@ -1,5 +1,5 @@
 import DOMElementCreator from './DOMElementCreator.js';
-
+import  createAboutUsSection  from '../pages/aboutus.js';
 // Creating logo for header and footer
 function createLogo() {
     const linkWrapper = new DOMElementCreator({ 
@@ -40,10 +40,10 @@ export function renderHeader() {
 
     const navBar = new DOMElementCreator({ tagName: 'nav', id: 'nav_bar' });
     const navItems = [
-        { text: 'Меню', link: 'menu.html' },
-        { text: 'О нас/История', link: 'aboutus.html' },
-        { text: 'Галерея/Интерьер', link: 'gallery.html' },
-        { text: 'Контакты', link: '#footer' }
+        { text: 'Меню' , data: "menu" },
+        { text: 'О нас/История', data: 'about' },
+        { text: 'Галерея/Интерьер', data: 'gallery' },
+        { text: 'Контакты', data: 'contacts' }
     ];
 
     navItems.forEach(item => {
@@ -51,11 +51,16 @@ export function renderHeader() {
         const a = new DOMElementCreator({
             tagName: 'a',
             content: item.text,
-            attr: { href: item.link, class: 'nav-link' }
+            attr: { class: 'nav-link',
+                'data-target': item.data,
+                href:'#'
+             }
         });
         li.append(a);
         navBar.append(li);
     });
+
+  
 
     const btn = new DOMElementCreator({ tagName: 'button', className: 'btn', content: 'Забронировать стол ' });
     const btnIcon = new DOMElementCreator({

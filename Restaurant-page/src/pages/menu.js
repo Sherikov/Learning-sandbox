@@ -1,12 +1,7 @@
 import '../../styles.css'; 
 import DOMElementCreator from '../components/DOMElementCreator.js';
-import { renderHeader,  renderFooter } from '../components/layout.js';
 
-// 1. render header and footer
-renderHeader();
-renderFooter();
 
-const main = document.getElementById('main');
 
 // 2. Data for menu page
 const menuData = {
@@ -67,12 +62,14 @@ function createMenuSection(sectionData) {
 }
 
 // 4. Page assembly
-const menuInfoDiv = new DOMElementCreator({ tagName: 'div', className: 'menu_info' });
+export function getMenuPage(){
+    const menuInfoDiv = new DOMElementCreator({ tagName: 'div', className: 'menu_info' });
 
-// Creating sections
-menuInfoDiv.append(createMenuSection(menuData.starters));
-menuInfoDiv.append(createMenuSection(menuData.mains));
-menuInfoDiv.append(createMenuSection(menuData.desserts));
+    // Creating sections
+    menuInfoDiv.append(createMenuSection(menuData.starters));
+    menuInfoDiv.append(createMenuSection(menuData.mains));
+    menuInfoDiv.append(createMenuSection(menuData.desserts));
 
-// Adding all section to main
-menuInfoDiv.addTo(main);
+    return menuInfoDiv.element;
+
+}
