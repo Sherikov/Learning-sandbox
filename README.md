@@ -32,6 +32,8 @@ Here you will find various landing pages, UI components, and small scripts creat
 
 | **[Landing-page-collection](./Landing-page-collection)** | HTML/CSS/JS | Collection of single-page websites, interactive UI components (sliders, forms), and layout experiments
 
+| **[To-do-list](./To-do-list)** | HTML/CSS/JS |A dynamic task management application built with **Vanilla JavaScript**, **ES6 Modules**, and **Webpack**.
+
 ---
 
 ## ⚠️ Disclaimer & Attribution
