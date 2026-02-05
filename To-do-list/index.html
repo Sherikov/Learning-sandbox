@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--Header-->
+    <header id="header">
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>clipboard-list</title><path d="M19 3H14.82C14.4 1.84 13.3 1 12 1S9.6 1.84 9.18 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3M7 8H9V12H8V9H7V8M10 17V18H7V17.08L9 15H7V14H9.25C9.66 14 10 14.34 10 14.75C10 14.95 9.92 15.14 9.79 15.27L8.12 17H10M11 4C11 3.45 11.45 3 12 3S13 3.45 13 4 12.55 5 12 5 11 4.55 11 4M17 17H12V15H17V17M17 11H12V9H17V11Z" /></svg>
+            <h1>To Do List</h1>
+        </div>
+        <!--Navigation bar-->
+        <nav id="nav_btn">
+            <button class="btn" id="btnAllTasks">Main</button>
+            <button class="btn" id="btnProjects">Project</button>
+            <button class="btn" id="btnUpcoming">Close-in</button>
+            <button class="btn" id="btnPriority">By priority</button>
+        </nav>
+
+        <div id="profile">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>account</title><path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" /></svg>
+        </div>
+        <!--Modal window-->
+        <dialog class="task_modal">
+            <h2 class="modalTitle">Add a new Project</h2>
+            <form action="" method="get" class="form">
+                    <label for="title" class="title"> Title <input type="text"  id="title" placeholder="Inter the title" ></label>
+                    <label for="date" class="date"> Deadline <input type="date" class="date_input"  placeholder="Inter the deadline" > </label>
+                    <label for="desriptionInput" class="desсriptionInput"> Description <input type="text" id="descriptionInput" placeholder="Inter the description of task/project"></label>
+                    <label for="prioritySelect" class="prioritySelect"> Priority  <select name="prioritySelect" id="prioritySelect">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High" >High</option>
+                    </select></label>
+                    <label for="projectChoice" class="projectChoice"> Add to project  <select name="projectChoice" id="projectChoice"> </select></label>
+                    <button class="btn_cancel">Cancel</button>
+                    <button type="submit" class="btn_add">Add</button>
+            </form>
+         </dialog>
+    </header>
+    
+    <!--Main-->
+    <main id="main" ></main>
+
+    <!--Task/Project Card-->
+     <template id="taskTemplate">
+    <label class="checkbox">
+        <input type="checkbox">
+        <span class="checkmark"></span>
+        <div class="text_content">
+            <span class="title">Title</span>
+            
+            <span class="date">2023-01-01 <i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>calendar-range</title><path d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z" /></svg></i></span>
+            
+            <span class="descriptionCard">Description</span>
+        </div>
+        <div class="edit">
+            <div class="priority">High</div>
+            <button class="btn editbtn"><i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>pencil-outline</title><path d="M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z" /></svg></i></button>
+            <button class="btn editbtn deleteBtn"><i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>trash-can-outline</title><path d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z" /></svg></i></button>
+        </div>
+    </label>
+</template>
+
+    <!-- Footer-->
+    <footer>
+        <div class="fab_container" id="fabContainer">
+        <div class="fab_options">
+            <button id="btnAddProject" class="fab_btn option">
+            <span>Add new Project</span>
+            </button>
+            <button id="btnAddTask" class="fab_btn option">
+            <span>Add new task</span>
+            </button>
+        </div>
+        <button class="fab_btn mainbtn" id="fabMainBtn">
+            <span class="icon">+</span>
+        </button>
+        </div>
+    </footer>
+
+    <!-- JS Script-->
+    <script src="./src/index.js"></script>
+</body>
+</html>
