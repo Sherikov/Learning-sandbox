@@ -32,7 +32,7 @@ The code is organized using the **MVC (Model-View-Controller)** pattern logic:
 -   `dist/`: Contains the production-ready bundled files.
 
 
-*(Optional: Add a screenshot of your app here)*
+
 ## 👤 Author
 
 **Sherikov Nafasbek**
