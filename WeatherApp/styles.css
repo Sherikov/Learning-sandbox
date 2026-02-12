@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-template-rows: 75px 560px 50px;
+    background-color: black;
+    row-gap: 10px;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #searchbox {
+        position: relative;
+    }
+    /*Search input styles*/
+    input {
+        width: 450px;
+        height: 50px;
+        padding-left: 45px;
+        border-radius: 12px;
+        background-color: #98989846;
+        border: none;
+        text-align: center;
+        color: white;
+        font-size: 1.1em;
+    }
+    /*Search icon styles*/
+    span {
+        position: absolute;
+        left: 15px;
+        top: 12px;
+        padding-right: 10px;
+
+    }
+    svg {
+        fill: white;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    display: none;
+}
+
+/*Hero section styles*/
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 4fr 1fr ;
+    gap: 8px;
+}
+ /*Styles for all container within City Cards container*/
+#main_container > div {
+        border-radius: 12px;
+        background-color: #98989823;
+        
+}
+
+#city {
+    grid-column: 1 / 5;
+    width: 900px;
+    height: 420px;
+    color: white;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)); 
+    background-blend-mode: overlay; 
+    transition: background-image 0.5s ease; 
+    
+}
+.weather_statusImg {
+    width: 210px;
+    height: 190px;
+ 
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+}
+
+.city_name {
+    font-size: 2.5em;
+}
+.date {
+    display: flex;
+    font-size: 1.1em;
+    gap: 2px;
+    border:none;
+    color:#ffeaeaa3;
+}
+
+.temperature_city {
+    font-size: 4.2em;
+}
+.weather_info {
+    font-size: 2em;
+}
+.info_card {
+    width: 217px;
+    height: 90px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    align-items:center;
+    justify-items: center;
+    padding: 15px;
+    color: rgba(217, 217, 217, 0.766);
+    h4 {
+         font-size: 1.3em;
+    }
+}
+
+.icons {
+    grid-row: 1 / 3;
+}
+
+.icons > svg {
+    fill: white;
+    height: 40px;
+}
+
+
+
+#footer {
+    grid-row: 3 / 4;
+    background-color:#98989823;
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 125px);
+    align-items:center;
+    padding-left: 35px;
+    gap: 5px;
+    color: rgb(201, 197, 197);
+
+    h2 {
+        justify-self: end;
+    };
+    div:last-child {
+        border-right:none;
+    }
+
+}
+
+ /*Styles for hourly weather info container*/
+.hourly_info {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 125px;
+    height: 35px;
+    border-right: 2px solid white;
+    gap: 10px;
+    /*Weather icon*/
+    svg {
+        fill: white;
+        height: 20px;
+    }
+}
+
+#side_bar {
+    color:#ecececc6;
+    grid-row: 1 / 4;
+    background-color:#bababa23;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding-top: 20px;
+    gap: 20px;
+    h3 {
+        align-self: start;
+        margin-left: 30px;
+    }
+}
+
+#history_list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/*Styles for recent searches card*/
+.city_searched {
+    padding: 15px;
+    width: 345px;
+    height: 140px;
+    border-radius: 12px;
+    background-color: #98989823;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    box-shadow: 0px 3px 8px 1px #08080863;
+}
+
+.city_searched > * {
+    padding-left: 20px;
+   
+}
+
+#city_name {
+    grid-column: 1 / 3 ;
+    font-size: 1.6em;     
+}
+
+#city_temperature {
+    font-size: 1.8em;
+}
+.weather_city {
+    grid-column: 1 / 4;
+   
+}
+
+.weather_icon {
+    display: flex;
+    gap: 10px;
+    svg {
+        height: 20px;
+        fill: white;
+    }
+}
+
+.wind_city{
+    grid-column: 2 / 4;
+}
+
