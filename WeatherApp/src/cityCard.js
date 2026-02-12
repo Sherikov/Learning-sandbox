@@ -1,4 +1,4 @@
-const giphyKey = 'bRoA6SsdfvltQE8dFCRTHazqWZqCLkW5';
+const giphyKey = 'Your key';
 
 const weatherIconImg = document.querySelector('.weather_statusImg');
 const cityCard = document.querySelector('#city');

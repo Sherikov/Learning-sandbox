@@ -9,7 +9,7 @@ const searchInput = document.querySelector('#search');
  
 
 // API Key
-const apiKey = 'FE6Q3X49SN962KAN92E9GS4UZ'; 
+const apiKey = 'Your key'; 
 
 
 const fetchWeatherData = async (location) => {
