@@ -2,3 +2,5 @@
 node_modules/
 [Rr]estaurant-page/node_modules/
 **/dist/
+bst.js
+chess.js
