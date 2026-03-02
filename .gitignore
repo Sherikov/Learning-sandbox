@@ -4,3 +4,4 @@ node_modules/
 **/dist/
 bst.js
 chess.js
+BattleShip
