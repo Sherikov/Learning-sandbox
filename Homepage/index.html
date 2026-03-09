@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leon Kennedy | Frontend Developer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero" id="top">
+    <!-- Decorative background elements -->
+    <div class="hero-background" aria-hidden="true">
+      <!-- SVG wave background -->
+      <div class="wave-container">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220" preserveAspectRatio="none">
+          <defs>
+            <path
+              id="wave-back-shape"
+              d="M0 92C118 158 278 169 470 118C646 71 828 49 996 81C1156 111 1286 129 1440 78V220H0Z"
+            ></path>
+            <path
+              id="wave-front-shape"
+              d="M0 132C142 184 312 177 520 122C730 66 914 58 1116 98C1258 126 1368 124 1440 104V220H0Z"
+            ></path>
+          </defs>
+          <g class="wave-layer wave-layer-back">
+            <use class="wave-back" href="#wave-back-shape"></use>
+            <use class="wave-back" href="#wave-back-shape" x="1440"></use>
+          </g>
+          <g class="wave-layer wave-layer-front">
+            <use class="wave-front" href="#wave-front-shape"></use>
+            <use class="wave-front" href="#wave-front-shape" x="1440"></use>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <!-- Header content -->
+    <div class="header-top">
+      <!-- Logo -->
+      <a class="logo" href="#top">Leon Kennedy</a>
+      <!-- Navigation -->
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Stack</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <nav class="social-links" aria-label="Social media">
+        <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://x.com/" target="_blank" rel="noreferrer">X</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </nav>
+    </div>
+    <!-- Hero introduction -->
+    <section class="hero-intro" id="about">
+      <!-- Profile photo -->
+      <div class="photo-wrapper">
+        <img class="profile-photo" src="./img/Profile.png" alt="Leon Kennedy portrait">
+      </div>
+      <!-- Bio and call to action -->
+      <div class="bio">
+        <p class="eyebrow">Frontend Developer - UI Engineer</p>
+        <h1>I build interfaces that look sharp and run fast</h1>
+        <p>
+          I design and ship product-oriented web interfaces with a focus on speed,
+          code clarity, and reliable responsive behavior. I like turning complex
+          flows into simple user experiences.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View projects</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+        <ul class="quick-stats" aria-label="Key stats">
+          <li>
+            <strong>20+</strong>
+            <span>learning and pet projects</span>
+          </li>
+          <li>
+            <strong>6</strong>
+            <span>core technologies in active use</span>
+          </li>
+          <li>
+            <strong>100%</strong>
+            <span>focus on responsive and accessible UI</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <section class="section projects" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">Portfolio</p> <!-- Section title -->
+        <h2>Selected projects</h2>
+      </div>
+      <!-- Projects grid -->
+      <div class="projects-grid"> 
+        <!-- Each project card includes title, description, tags, and link -->
+        <article class="project-card">
+          <h3>Weather App</h3>
+          <p>Weather dashboard with city search, API data flow, and clean UI states.</p>
+          <ul class="tags">
+            <li>JavaScript</li>
+            <li>API</li>
+            <li>CSS</li>
+          </ul>
+          <a class="card-link" href="../WeatherApp/">Open project</a>
+        </article>
+        <article class="project-card">
+          <h3>To-do List</h3>
+          <p>Task organizer with filtering, local storage, and fast interaction design.</p>
+          <ul class="tags">
+            <li>Webpack</li>
+            <li>DOM</li>
+            <li>LocalStorage</li>
+          </ul>
+          <a class="card-link" href="../To-do-list/">Open project</a>
+        </article>
+        <article class="project-card">
+          <h3>Library Page</h3>
+          <p>Book manager with card layouts, form validation, and data handling logic.</p>
+          <ul class="tags">
+            <li>OOP</li>
+            <li>Forms</li>
+            <li>UI</li>
+          </ul>
+          <a class="card-link" href="../LibraryPage/">Open project</a>
+        </article>
+        <article class="project-card">
+          <h3>Dashboard</h3>
+          <p>Admin-style layout using CSS Grid, visual hierarchy, and reusable blocks.</p>
+          <ul class="tags">
+            <li>CSS Grid</li>
+            <li>Layout</li>
+            <li>Components</li>
+          </ul>
+          <a class="card-link" href="../Dashboard/">Open project</a>
+        </article>
+        <article class="project-card">
+          <h3>Restaurant Page</h3>
+          <p>Landing page with dynamic tabs, modular sections, and strong content flow.</p>
+          <ul class="tags">
+            <li>JavaScript</li>
+            <li>SPA Basics</li>
+            <li>UX</li>
+          </ul>
+          <a class="card-link" href="../Restaurant-page/">Open project</a>
+        </article>
+        <article class="project-card">
+          <h3>BattleShip</h3>
+          <p>Battleship game with board logic, turn mechanics, and test-oriented structure.</p>
+          <ul class="tags">
+            <li>TDD</li>
+            <li>Game Logic</li>
+            <li>Jest</li>
+          </ul>
+          <a class="card-link" href="../BattleShip/">Open project</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills section with technology tags -->
+    <section class="section skills" id="skills">
+      <div class="section-heading">
+        <p class="eyebrow">Technology</p> <!-- Section title -->
+        <h2>My working stack</h2>
+      </div>
+      <div class="skill-cloud" aria-label="Technology list">
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>JavaScript</span>
+        <span>Webpack</span>
+        <span>Jest</span>
+        <span>Git</span>
+        <span>Responsive Design</span>
+        <span>Accessibility</span>
+      </div>
+    </section>
+
+    <!-- Contact section with call to action -->
+    <section class="section contact" id="contact">
+      <div class="contact-card">
+        <p class="eyebrow">Collaboration</p> <!-- Section title -->
+        <h2>Ready to join your next project</h2>
+        <p>
+          If you need support with frontend architecture, redesign work, or product UI
+          execution, send me a message. I work transparently and stay focused on delivery.
+        </p>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:leon.kennedy.dev@gmail.com">Send email</a>
+          <a class="btn btn-ghost" href="tel:+10000000000">Call me</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer with copyright and back to top link -->
+  <footer class="footer">
+    <p>Copyright 2026 Leon Kennedy. Built with HTML and CSS.</p>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <script src="./src/index.js" defer></script>
+</body>
+</html>
+
+
