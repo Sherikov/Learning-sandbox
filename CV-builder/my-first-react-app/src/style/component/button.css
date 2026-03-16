@@ -1,0 +1,42 @@
+.cv-form-btn {
+    width: min(450px, 100%);
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    background: #0450d4ad;
+    color: rgb(255, 255, 255);
+}
+
+.cv-form-btn:hover {
+    background: #042967f0;
+}
+
+.cv-edit-btn {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border: none;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: #0450d4ad;
+    color: #ffffff;
+    box-shadow: 0 6px 18px rgba(4, 80, 212, 0.18);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cv-edit-btn:hover {
+    background: #042967f0;
+    transform: translateY(-1px);
+}
+
+.cv-edit-btn svg {
+    display: block;
+}

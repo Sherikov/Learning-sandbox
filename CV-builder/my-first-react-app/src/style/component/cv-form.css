@@ -1,0 +1,128 @@
+.cv-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    color: rgb(255, 255, 255);
+    background: rgba(109, 159, 250, 0.35);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.4px);
+    -webkit-backdrop-filter: blur(9.2px);
+    border: 1px solid rgba(255, 255, 255, 0.77);
+    margin: 24px 0;
+    height: calc(100vh - 48px);
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 28px;
+    box-sizing: border-box;
+}
+
+.cv-form::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.cv-form-title {
+    font-size: 3.5rem;
+    margin: 0;
+    padding: 20px;
+}
+
+.cv-form-subtitle {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 20px 20px 12px;
+    align-self: flex-start;
+    font-weight: 400;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 16px;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+label {
+    font-weight: 600;
+}
+
+.education-form-section,
+.work-form-section,
+.skill-form-section {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.education-form-title {
+    padding-top: 8px;
+}
+
+.education-form-grid {
+    row-gap: 16px;
+}
+
+.form-entry-switcher {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.form-entry-chip {
+    border: none;
+    border-radius: 999px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.18);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.form-entry-chip:hover {
+    background: rgba(255, 255, 255, 0.28);
+    transform: translateY(-1px);
+}
+
+.form-entry-chip.is-active {
+    background: #ffffff;
+    color: #042967;
+}
+
+.form-buttons {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.cv-form-actions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 28px;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.textarea {
+    width: 85%;
+    margin-top: 10px;
+    height: 100px;
+    border-radius: 8px;
+    padding: 10px;
+    border: none;
+    resize: none;
+}
