@@ -1,12 +1,25 @@
-# React + Vite
+# React To-Do Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A task management application built to explore the fundamentals of the React library and its component-based architecture. The visual design was provided as part of a guided video course.
 
-Currently, two official plugins are available:
+## 🎯 Project Purpose & Context
+Rather than simply reproducing code from a tutorial, the primary objective of this project was to understand the end-to-end process of building a React application. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Having previously built a similar To-Do application using Vanilla JavaScript, this project served as a direct comparative study. It highlighted the practical differences between imperative DOM manipulation and React's declarative state-driven UI.
 
-## Expanding the ESLint configuration
+## 🧠 Core Concepts Explored
+* **Declarative UI:** Understanding how React automatically updates and renders the right components when data (state) changes, eliminating manual DOM queries (`document.querySelector`, etc.).
+* **Component Architecture:** Breaking down the UI into functional, independent pieces (e.g., Input Form, Task List, Task Item).
+* **State Management & Props:** Using `useState` to store application data and passing functions/data down the component tree via props.
+* **List Rendering:** Handling arrays of data in JSX and understanding the critical importance of unique `key` props for performance and state consistency.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech Stack
+* **Frontend:** React.js
+* **Styling:** CSS3
+
+## 📸 Preview
+![React To-Do Preview](screenshot.png)
+
+
+
+---
