@@ -1,16 +1,30 @@
-# React + Vite
+# CV Builder (React Assignment)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based web application that allows users to create and preview professional resumes in real-time. 
 
-Currently, two official plugins are available:
+## 🎯 Project Purpose
+This project was developed as part of a React course. While the functional requirements were provided as a task description, the **UI/UX design and component architecture were created entirely from scratch**. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The goal was to transform a set of requirements into a functional, user-friendly tool without following a step-by-step visual tutorial.
 
-## React Compiler
+## 🚀 Key Features
+* **Real-time Live Preview:** Changes made in the form are instantly reflected in the CV document layout.
+* **Dynamic Sections:** Ability to add, edit, and remove multiple entries for Work Experience and Education.
+* **Modular Architecture:** The interface is broken down into small, specialized components for better maintainability.
+* **Custom Design:** A clean, minimalist interface focused on readability.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🧠 Technical Learning Objectives
+The primary focus of this project was to master core React concepts:
+* **State Management:** Using `useState` to handle complex, nested objects (personal info, experience lists, education).
+* **Lifecycle & Effects:** Implementing `useEffect` to manage data synchronization and side effects.
+* **Form Handling:** Managing controlled components and ensuring proper data flow between parent and child components.
+* **Component Composition:** Organizing the project structure to follow the principle of "Single Responsibility."
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
+* **Frontend:** React.js
+* **Styling:** CSS3 (Custom styles)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📸 Preview
+![Project Screenshot](screenshot.png)
+
+---

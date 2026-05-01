@@ -336,7 +336,7 @@ const CvBuilder = () => {
           {!isSkillFormVisible && (
             <Button className="cv-form-btn" text="[+] Add Skill" onClick={openNewSkillForm} />
           )}
-          <Button type="button" className="cv-form-btn" text="Submit" onClick={handleExportPdf} />
+          <Button type="button" className="cv-form-btn" text="Export CV" onClick={handleExportPdf} />
         </div>
       </div>
 
