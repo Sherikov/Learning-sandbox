@@ -24,3 +24,6 @@ A browser-based sketch pad created as part of **The Odin Project**. This project
 * Manipulating the DOM to create a grid of divs dynamically.
 * Understanding capturing and bubbling phases of standard DOM events.
 * Using CSS Flexbox to ensure the grid remains square regardless of resolution.
+
+## 📸 Preview
+![Etch-a-Sketch Preview](screenshot.png)
