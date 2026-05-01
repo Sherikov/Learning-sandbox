@@ -19,3 +19,7 @@ A small application to track books in a personal library. This project was a dee
 * Using **Object Constructors** and **Prototypes** to create book instances.
 * Understanding the difference between `this` context in different functions.
 * Manually managing an array of objects and rendering them to the DOM.
+
+## 📸 Preview
+![LibraryApp Preview](screenshot.png)
+![LibraryApp - Modal Window Preview](modalWindow.png)
