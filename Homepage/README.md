@@ -22,7 +22,7 @@ This project was developed to practice configuring modern build tools and implem
 1. Clone the repository.
 2. Navigate to the project directory: `cd Homepage`
 3. Install dependencies: `npm install`
-4. Start the development server: `npm start` *(or the relevant command in package.json)*
+4. Start the development server: `npm start` 
 5. Build for production: `npm run build`
 
 ---
