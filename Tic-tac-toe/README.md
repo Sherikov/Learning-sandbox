@@ -19,3 +19,7 @@ A browser-based implementation of the classic Tic-Tac-Toe game. The main focus o
 * Minimizing global scope pollution using **IIFEs** (Immediately Invoked Function Expressions).
 * encapsulating private variables and functions within modules (closures).
 * separating the game logic from the DOM manipulation logic.
+
+
+## 📸 Preview
+![Tic-Tac-Toe](screenshot.png)
