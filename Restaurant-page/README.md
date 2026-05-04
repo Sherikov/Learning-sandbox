@@ -19,6 +19,9 @@ This project focuses on the following concepts:
 * **npm**
 * **HTML5 / CSS3**
 
+## 📸 Preview
+![Restaurant-page](screenshot.png)
+
 ## 🚀 Getting Started
 
 To run this project locally on your machine, follow these steps:
