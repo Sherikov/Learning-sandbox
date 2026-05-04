@@ -28,7 +28,7 @@ The code is organized using the **MVC (Model-View-Controller)** pattern logic:
 
 
 
-## 👤 Author
+![WeatherAPP](screenshot.png)
 
 **Sherikov Nafasbek**
 
