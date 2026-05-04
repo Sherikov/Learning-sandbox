@@ -12,6 +12,9 @@ This project focuses on the following concepts:
 * **DOM Manipulation**: Rendering the UI completely through JavaScript without hardcoding HTML.
 * **ES6 Modules**: Organizing code into separate logic modules (Home, Menu, Contact) and importing them into the main entry point.
 
+## 📸 Preview
+![Restaurant-page](screenshot.png)
+
 ## 🛠️ Built With
 
 * **JavaScript (ES6+)**
@@ -19,8 +22,7 @@ This project focuses on the following concepts:
 * **npm**
 * **HTML5 / CSS3**
 
-## 📸 Preview
-![Restaurant-page](screenshot.png)
+
 
 ## 🚀 Getting Started
 
