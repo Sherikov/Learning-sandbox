@@ -71,4 +71,3 @@ Restaurant-page/
     Dynamic Content: Content is cleared and re-rendered via DOM manipulation upon tab switching.
 
 <hr>
-Author: Sherikov Nafasbek
