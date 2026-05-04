@@ -33,7 +33,10 @@ The code is organized using the **MVC (Model-View-Controller)** pattern logic:
 
 
 
-## 👤 Author
+
+## 📸 Preview
+![To-Do list](screenshot.png)
+![To-Do list](modalWindow.png)
 
 **Sherikov Nafasbek**
 
