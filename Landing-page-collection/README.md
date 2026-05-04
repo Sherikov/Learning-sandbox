@@ -1,22 +1,30 @@
-# 🎨 UI & Layout Collection
+# 🎨 Landing Page Collection
 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+A curated gallery of single-page websites and landing pages developed to master precise layout implementation, responsive design, and CSS architecture.
 
-This directory contains a collection of single-page websites, interactive UI components (sliders, forms), and layout experiments. These projects were built to practice **Pixel-Perfect** implementation from design mockups (Figma, PSD) and video tutorials.
+## 🎯 Purpose
+The main goal of this collection is to practice translating complex design mockups into clean, semantic code. These projects range from pure CSS layouts to interactive pages with JavaScript components.
 
-## 🎯 Learning Objectives
+## 🖼️ Gallery & Project Showcase
 
-The main goal of this collection was to master the fundamentals of layout and styling:
+| Project |  Tech Stack | Preview |
+| :--- | :--- | :--- |
+| **BakeryShop** | HTML, CSS | ![BakeryShop Preview](./BakeryShop/screenshot.png) |
+| **Designers' website** |  HTML, CSS, Flexbox, Animation | ![Designers' website Preview](./Designers'-website/preview.png) |
+| **Forest** | HTML, SASS, JS, Slider | ![Forest Preview](./Forest/preview.png) |
+| **Robo-school** | HTML, SASS, JS| ![Robo-school Preview](./Robo-school/preview.png) |
+| **Sign up form** | HTML, CSS  | ![Sign up form Preview](./Sign-up-form/preview.png) |
+| **Slider** | HTML, CSS, JS, Slider | ![Slider Preview](./Slider/preview.png) |
 
-* **Responsive Design:** Making layouts adapt fluidly to mobile, tablet, and desktop screens using Media Queries.
-* **CSS Architecture:** Practicing distinct layout models (**Flexbox** & **CSS Grid**).
-* **Interactivity:** Using vanilla JavaScript to create carousels, toggles, and modal windows.
-* **Design-to-Code:** Accurately translating visual designs into semantic HTML markup.
+## 🧠 Core Competencies
+* **Pixel Perfect Implementation:** Focus on matching the original mockup spacing, typography, and proportions.
+* **Responsive & Adaptive:** Using Media Queries and fluid layouts (Flex/Grid) to ensure the design works on all screen sizes.
+* **Asset Optimization:** Efficient handling of images, icons (SVG), and custom web fonts.
 
-## 🛠️ Tech Stack
-
-* **HTML5** (Semantic structure)
-* **CSS3** (Animations, Flexbox, Grid)
-* **JavaScript** (For sliders and interactive elements)
+## 🛠 Tech Used
+* Semantic HTML5
+* CSS3 (Flexbox, Grid, Animations, Custom Properties)
+* JavaScript (ES6+) for interactive elements
 
 ---
+*Note: This is a sub-folder of the [Learning Sandbox](../) repository.*
