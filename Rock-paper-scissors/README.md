@@ -19,3 +19,7 @@ The classic game played against the computer. This was the first JavaScript proj
 * Writing basic functions and conditional statements (`if/else`).
 * Understanding `Math.random()` implementation.
 * Interacting with the DOM to display results instead of using `console.log`.
+
+
+## 📸 Preview
+![Rock-Paper-Scissors](screenshot.png)
