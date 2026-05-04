@@ -20,4 +20,3 @@ The main goal of this collection was to master the fundamentals of layout and st
 * **JavaScript** (For sliders and interactive elements)
 
 ---
-**Author:** [Sherikov Nafasbek](https://github.com/Sherikov)
