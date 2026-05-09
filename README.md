@@ -26,6 +26,7 @@ Here you will find various landing pages, UI components, React applications, and
 ### 🟨 Vanilla JavaScript & Logic
 | Project | Tech Stack | Description |
 | :--- | :--- | :--- |
+| **[Calculator](./Calculator)** |  HTML, CSS, JS | Simple CalculatorApp with IOS-theme |
 | **[Restaurant Page](./Restaurant-page)** | Webpack, JS Modules | Dynamic DOM generation & asset management |
 | **[To-do-list](./To-do-list)** | HTML/CSS/JS, Webpack | A dynamic task management application built with Vanilla JavaScript and ES6 Modules |
 | **[Tic-Tac-Toe](./Tic-tac-toe)** | JS Modules | Classic game using Factory Functions & Module Pattern |
