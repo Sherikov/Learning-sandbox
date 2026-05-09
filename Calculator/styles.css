@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(37, 150, 190);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.main {
+    align-self: center;
+    width:400px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid orange;
+    margin-top: 70px;
+    border-radius: 10%;
+    flex-direction: column;
+    background-color:rgba(46, 46, 46);
+    box-shadow: 9px 6px 14px 5px;
+
+
+}
+
+.label1 {
+    color:white;
+    font-size: 50px;
+    width: 95%;
+    height: 45px;
+    padding-left: 20px;
+    text-wrap: inherit;
+
+}
+
+input[type="text"] {
+    width: 360px;
+    height: 45px;
+    margin-top: 10px;
+    background-color:rgba(46, 46, 46);
+    margin-bottom: 10px;
+    border:0;
+    font-size: 50px;
+    text-align: right;
+    color:white;
+    padding-right: 25px;
+}
+
+.buttons {
+    
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 450;
+    gap: 5px;
+    
+}
+
+
+.btn {
+    width: 85px;
+    height: 85px;
+    border-radius: 55%;
+    color:rgba(249, 249, 249);
+    font-size: 30px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.1s;
+    box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.2);
+    
+}
+.btn:hover{
+    background-color:rgb(37, 150, 190);
+}
+
+.btn:active{
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+    transform: translateY(4px);
+}
+.btn-calc {
+    background-color: rgba(255, 168, 22);
+    border: 0px;
+
+}
+
+
+.btn-action {
+    background-color: hsla(0, 0%, 24%, 0.953);
+    border:0;
+}
+
+.btn-number {
+    border:0; 
+    background-color: rgba(86, 86, 86);
+    box-shadow: 0px 5px 0px rgb(50, 50, 50);
+}
+
+.btn-number:active {
+    box-shadow: 0px 0px 0px rgb(50, 50, 50); /* Тень пропадает */
+    transform: translateY(5px); /* Кнопка опускается */
+}
+
+.clear {
+    flex-grow: 1;
+    border-radius:40%;
+}
