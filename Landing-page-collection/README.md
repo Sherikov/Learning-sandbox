@@ -15,6 +15,7 @@ The main goal of this collection is to practice translating complex design mocku
 | **Robo-school** | HTML, SASS, JS| ![Robo-school Preview](./Robo-school/preview.png) |
 | **Sign up form** | HTML, CSS  | ![Sign up form Preview](./Sign-up-form/preview.png) |
 | **Slider** | HTML, CSS, JS, Slider | ![Slider Preview](./Slider/preview.png) |
+| **UI ProfilCard** | HTML, CSS, React, webpack | ![ProfilCard Preview](./ProfileCard/preview.png) |
 
 ## 🧠 Core Competencies
 * **Pixel Perfect Implementation:** Focus on matching the original mockup spacing, typography, and proportions.
