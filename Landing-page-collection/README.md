@@ -27,4 +27,3 @@ The main goal of this collection is to practice translating complex design mocku
 * JavaScript (ES6+) for interactive elements
 
 ---
-*Note: This is a sub-folder of the [Learning Sandbox](../) repository.*
