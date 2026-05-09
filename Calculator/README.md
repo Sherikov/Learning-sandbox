@@ -25,5 +25,8 @@ During development, the following JS aspects were mastered:
 2.  **State Management**: Maintaining current values, previous values, and selected operators.
 3.  **Edge Cases**: Handling division by zero and preventing multiple decimal points in a single number.
 
+## 📸 Preview
+![Project Screenshot](screenshot.png)
+
 ---
 *Project completed independently based on the provided technical requirements.*
