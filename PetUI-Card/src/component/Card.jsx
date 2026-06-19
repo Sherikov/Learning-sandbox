@@ -1,41 +1,67 @@
 import '../style/styles.css';
 import { useState } from 'react';
 import { Icon } from '@iconify/react';
-import DogPng from '../../assets/dog.jpg';
+
+const FEMALE_ICON = 'material-symbols-light:female';
 
 const statClass =
     'w-16 h-12 bg-gray-300/40 text-black text-wrap text-center rounded-lg flex flex-col font-semibold shadow-sm';
-const description =
+
+const defaultDescription =
     'Buddy is a friendly and energetic Golden Retriever who loves to play fetch and go for long walks. He is great with kids and other pets, making him the perfect family companion. Buddy is looking for a loving home where he can get plenty of exercise and affection.';
 
 const Card = (props) => {
-    const { img, name, breed, age, height, weight, distance } = props;
+    const {
+        img,
+        fallbackImg,
+        name,
+        breed,
+        age,
+        height,
+        weight,
+        distance,
+        description = defaultDescription,
+        gender = 'male',
+        onAdopt,
+        onDonate,
+    } = props;
+
     const [isExpanded, setIsExpanded] = useState(false);
+    const imageSrc = img || fallbackImg;
 
     return (
         <div className="container w-full h-full flex items-center justify-center p-4">
             <div
                 className={`
-                    card w-full max-w-75 bg-white rounded-4xl shadow-2xl overflow-hidden
+                    card w-full max-w-[300px] bg-white rounded-4xl shadow-2xl overflow-hidden
                     flex flex-col items-stretch transition-all duration-300 ease-in-out
-                    md:max-w-85
-                    ${isExpanded ? 'md:h-auto md:min-h-160' : 'md:h-160'}
+                    md:max-w-[340px]
+                    ${isExpanded ? 'md:h-auto md:min-h-[640px]' : 'md:h-[640px]'}
                     lg:max-w-none lg:w-[min(100%,720px)] lg:flex-row
-                    ${isExpanded ? 'lg:h-auto lg:min-h-85' : 'lg:h-85'}
+                    ${isExpanded ? 'lg:h-auto lg:min-h-[340px]' : 'lg:h-[340px]'}
                 `}
             >
                 <div
                     className="
                         shrink-0 w-full overflow-hidden transition-all duration-300 ease-in-out
-                        h-50 md:h-85
-                        lg:w-1/2 lg:h-auto lg:min-h-85 lg:self-stretch
+                        h-[200px] md:h-[340px]
+                        lg:w-1/2 lg:h-auto lg:min-h-[340px] lg:self-stretch
                     "
                 >
-                    <img
-                        src={img || DogPng}
-                        alt="Dog"
-                        className="w-full h-full object-cover"
-                    />
+                    {imageSrc ? (
+                        <img
+                            src={imageSrc}
+                            alt={name || 'Pet'}
+                            className="w-full h-full object-cover"
+                        />
+                    ) : (
+                        <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                            <Icon
+                                className="w-16 h-16 text-gray-400"
+                                icon="ph:paw-print-fill"
+                            />
+                        </div>
+                    )}
                 </div>
 
                 <div
@@ -47,10 +73,18 @@ const Card = (props) => {
                     <div className="grid grid-cols-2 grid-rows-2 gap-1 px-4 lg:px-0">
                         <h1 className="row-span-1 col-span-1 flex items-center gap-1 font-bold text-xl md:text-2xl">
                             {name || 'Buddy'}
-                            <Icon
-                                className="w-4 h-4 text-black shrink-0"
-                                icon="material-symbols:male"
-                            />
+                            {gender === 'male' && (
+                                <Icon
+                                    className="w-4 h-4 text-black shrink-0"
+                                    icon="material-symbols:male"
+                                />
+                            )}
+                            {gender === 'female' && FEMALE_ICON && (
+                                <Icon
+                                    className="w-4 h-4 text-black shrink-0"
+                                    icon={FEMALE_ICON}
+                                />
+                            )}
                         </h1>
                         <p className="row-span-2 col-span-1 font-light text-gray-500 text-sm md:text-base">
                             {breed || 'Golden Retriever'}
@@ -99,8 +133,9 @@ const Card = (props) => {
                             </p>
 
                             {!isExpanded && (
-                                <div className="absolute bottom-0 right-0 bg-linear-to-l from-white via-white to-transparent pl-8 pt-1">
+                                <div className="absolute bottom-0 right-0 bg-gradient-to-l from-white via-white to-transparent pl-8 pt-1">
                                     <button
+                                        type="button"
                                         onClick={() => setIsExpanded(true)}
                                         className="text-pink-500 font-semibold uppercase text-sm bg-white"
                                     >
@@ -112,6 +147,7 @@ const Card = (props) => {
 
                         {isExpanded && (
                             <button
+                                type="button"
                                 onClick={() => setIsExpanded(false)}
                                 className="mt-2 text-pink-500 font-semibold uppercase text-sm"
                             >
@@ -128,6 +164,8 @@ const Card = (props) => {
                         "
                     >
                         <button
+                            type="button"
+                            onClick={onDonate}
                             className="
                                 w-full h-10 bg-gray-300/40 text-black font-bold rounded-lg
                                 flex items-center gap-2 justify-center
@@ -138,6 +176,8 @@ const Card = (props) => {
                             Donate <Icon icon="solar:dollar-bold" />
                         </button>
                         <button
+                            type="button"
+                            onClick={onAdopt}
                             className="
                                 w-full h-10 bg-pink-600 text-[18px] text-white rounded-lg
                                 flex items-center gap-2 justify-center
