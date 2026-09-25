@@ -18,6 +18,10 @@ Thumbs.db
 .idea/
 
 # Local drafts 
+drafts/
 bst.js
 chess.js
 BattleShip
+**/bst.js
+**/chess.js
+**/BattleShip
